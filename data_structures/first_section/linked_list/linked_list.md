@@ -20,6 +20,9 @@
   2. It allows "infinite" number of elements
   3. Allows any datatype as value on each node
 
+* Limitations:
+  1. Can only be traversed from the head to tail (each node only has a next node reference)
+   
 * Additional methods:
   1. First: returns the first node's value
   2. IsEmpty: returns True if it is empty and False if it is not
