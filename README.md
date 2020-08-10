@@ -1,8 +1,7 @@
-# Data_Structures_And_Algorithms
+# Data Structures, Algorithms and Competitive Programming courses
 
 ## Data Structures
 
 ### Stacks
-  * [Stack on C++](https://github.com/glacasellaUANDES/Data_Structures_And_Algorithms/blob/master/data_structures/first_section/stack.cpp) 
-  * [Stack on Python](https://github.com/glacasellaUANDES/Data_Structures_And_Algorithms/blob/master/data_structures/first_section/stack.py) 
+  * [Stack] ()
 
