@@ -1,5 +1,4 @@
 
-
 class Node:
     def __init__(self, value=None, next_node=None):
         self.value = value
@@ -10,8 +9,6 @@ class Node:
     
     def set_next_node(self, value):
         self.next_node = next_node
-    
-
 
 class Linked_List:
     def __init__(self):
@@ -50,7 +47,17 @@ class Linked_List:
             self.head_node = self.head_node.next_node
     
     def remove_tail(self):
-        pass
+        indx = 0
+        if self.head_node == None:
+            raise IndexError
+        if self.length() == 1:
+            self.head_node = None
+        else:
+            reference = self.head_node
+            while indx < self.length()-2:
+                reference = reference.next_node
+                indx += 1
+            reference.next_node = None
 
     def insert_node_at_index(self, value, index):
         if self.valid_index(index):
@@ -66,8 +73,19 @@ class Linked_List:
         else:
             raise IndexError
 
-    def remove_node_at_index(self, value, index):
-        pass
+    def remove_node_at_index(self, index):
+        if self.valid_index(index):
+            if index == 0:
+                self.remove_head()
+            elif index == self.length()-1:
+                self.remove_tail()
+            else:
+                cnt = 0
+                reference = self.head_node
+                while cnt <= index - 2:
+                    reference = reference.next_node
+                    cnt += 1
+                reference.next_node = reference.next_node.next_node
 
     def valid_index(self, index):
         if index not in range(0, self.length()):
@@ -85,14 +103,3 @@ class Linked_List:
                 cnt += 1
                 reference = reference.next_node
         return cnt
-
-llist = Linked_List()
-print(llist)
-llist.add_node_at_head(1)
-print(llist)
-llist.add_node_at_head(2)
-print(llist)
-llist.add_node_at_tail(3)
-print(llist)
-llist.insert_node_at_index(20, 3)
-print(llist)
