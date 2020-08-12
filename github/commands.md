@@ -15,4 +15,6 @@
 *  *git merge* is a command used to get the files from the local repository into the working directory.
 *  *git pull* is command used to get files from the remote repository directly into the working directory. It is equivalent to a *git fetch* and a *git merge*
 
-<img src="./img/git.png"/>
+<p align="center">
+    <img src="./img/git.png"/>
+</p>
