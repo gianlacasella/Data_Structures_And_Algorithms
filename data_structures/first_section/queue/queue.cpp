@@ -23,6 +23,7 @@ class Queue{
       add -> data = new_data;
       if(first == NULL){
         first = add;
+	last = add;
       }
       else{
         Node *node_var = first;
